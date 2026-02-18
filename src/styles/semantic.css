@@ -1,0 +1,39 @@
+@import url(tokens.css);
+
+/* Son roles de la interfaz */
+
+:root {
+
+    /*  *************BRAND********* */
+
+    --color-brand: var(--color-primary-200); /*color principal del proyecto*/
+    --color-brand-hover:var(--color-primary-800); /*generalmente es de un tomo mas oscuro*/
+    --color-brand-soft: var(--color-primary-100);
+
+    /* ************BACKGROUND******** */
+
+    --color-backgraund: var(--color-primary-50); /*Fondo estructural de todo el proyecto*/
+    --color-surface: var(--white); /* Fondo de modales, cards, containers*/
+    --color-surface: var(--color-primary-200); /* Zonas secundarias, con menos importancia*/
+    
+    /* *********TEXT******** */
+    --color-text-primary: var(--color-gray-900); /*color principal de lectura*/
+    --color-text-secundary: var(--color-gray-700); /*Textos menos importantes*/
+    --color-text-mute: var(--color-gray-500); /*Texto desabilitado*/
+    --color-text-inverse: var(--white); /*texto invertido*/
+
+    /* *********BORDER***** */
+
+    --color-border: var(--color-gray-700); /*Borde principal de los componentes*/
+    --color-border-strong: var(--color-primary-700); /*borde fuerte (de mayor contraste)*/
+
+    /* *********STATE******** */
+
+    --color-warning: var(--color-secundary-600); /*color para alertas*/
+
+    /* ************************************ */
+    /* YA NO DEPENDEMOS DE NOMBRE DE COLOR,
+            DEPENDEMOS DE INTENCIÓN */
+    /* ************************************ */
+
+}
