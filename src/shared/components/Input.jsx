@@ -10,7 +10,7 @@ export default function Input({label, type = "text", ...props}){
                     block 
                     text-[8px] 
                     mb-1
-                    text-gray-600
+                    
                 "
             >
                 {label}

@@ -1,5 +1,7 @@
-import UserForm from "./../features/users/components/UserForm"
-import './../styles/global.css'
+import UserForm from "@/features/users/components/UserForm"
+import '@/styles/global.css'
+import DeleteCounter from "@/shared/components/DeleteCounter"
+
 
 export default function App(){
   return(
@@ -10,6 +12,7 @@ export default function App(){
       <div>
         <UserForm/>
       </div>
+        <DeleteCounter/>
     </div>
   )
 }

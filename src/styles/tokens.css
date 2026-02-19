@@ -47,5 +47,15 @@
     --main-font: Piazzola; /* Tipografia de letra principal */
     --secundary-font: Roboto; /*Tipografia de letra secundaria */
 
+    --fs-xxxxl: 5rem;
+    --fs-xxxl: 4rem;
+    --fs-xxl: 3rem;
+    --fs-xl:  2.5rem;
+    --fs-lg: 2rem;
+    --fs-mg: 1.5rem;
+    --fs-xs: 1.25rem;
+    --fs-xxs: 1rem;
+    --fs-xxxs: 0.5rem;
+    
     
 }
