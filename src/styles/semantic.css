@@ -4,36 +4,55 @@
 
 :root {
 
-    /*  *************BRAND********* */
-
-    --semantic-brand: var(--color-primary-200); /*color principal del proyecto*/
+    /*  *************BRAND********* (colores principales de la marca)*/
+    --semantic-brand: var(--color-primary-50); /*color principal del proyecto*/
     --semantic-brand-hover:var(--color-primary-800); /*generalmente es de un tomo mas oscuro*/
-    --semantic-brand-soft: var(--color-primary-100);
+    --semantic-brand-soft: var(--color-primary-100); 
+
 
     /* ************BACKGROUND******** */
-
     --semantic-backgraund: var(--color-primary-50); /*Fondo estructural de todo el proyecto*/
     --semantic-surface: var(--white); /* Fondo de modales, cards, containers*/
     --semantic-surface: var(--color-primary-200); /* Zonas secundarias, con menos importancia*/
     
     /* *********TEXT******** */
-    --semantic-text-primary: var(--color-gray-900); /*color principal de lectura*/
-    --semantic-text-secundary: var(--color-gray-700); /*Textos menos importantes*/
+    --semantic-text-primary: var(--color-primary-800); /*color principal de lectura (titulos)*/ 
+    --semantic-text-secundary: var(--black); /*Textos menos importantes (informacion)*/
     --semantic-text-mute: var(--color-gray-500); /*Texto desabilitado*/
     --semantic-text-inverse: var(--white); /*texto invertido*/
 
-    /* *********BORDER***** */
+    /* *******TIPOGRAFIA********** */
+    --semantic-text-main: var(--font-family-main); /*tipo de letra principal*/
+    --semantic-text-secundary: var(--font-family-secundary); /*tipo de letra secundario*/
 
-    --semantic-border: var(--color-gray-700); /*Borde principal de los componentes*/
-    --semantic-border-strong: var(--color-primary-700); /*borde fuerte (de mayor contraste)*/
+    /* ********VARIANTES DE TIPOGRAFIA******** */
+    --semantic-font-light: var(--font-weight-light);
+    --semantic-font-semibold: var(--font-weight-semibold);
+    --semantic-font-extrabold: var(--font-weight-extrabold);
+
+    /* ********TAMAÑOS************* */
+    --semantic-fs-big: var(--fs-big);     /*56px*/
+    --semantic-fs-lg: var(--fs-lg);       /*32px*/
+    --semantic-fs-xs: var(--fs-xs);       /*16px*/
+    --semantic--fs-xxs: var(--fs-xxs);    /*14px*/
+    --semantic-fs-xxxxs: var(--fs-xxxxs); /* 8px*/
+
+    /* *********BORDER***** *(colores)*/
+    --semantic-border: var(--color-primary-50); /*Borde principal de los componentes*/
+    --semantic-border-strong: var(--color-primary-950); /*borde fuerte (de mayor contraste)*/
+
+    /* *******BORDER RADIUS********** */
+    --semantic-br-md: var(--radius-md);  /* 8px*/
+    --semantic-br-lg: var(--radius-lg);  /*12px*/
+    --semantic-br-xl: var(--radius-xl);  /*16px*/
 
     /* *********STATE******** */
-
     --semantic-warning: var(--color-secundary-600); /*color para alertas*/
 
     /* ************************************ */
     /* YA NO DEPENDEMOS DE NOMBRE DE COLOR,
             DEPENDEMOS DE INTENCIÓN */
     /* ************************************ */
+
 
 }

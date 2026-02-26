@@ -1,18 +1,26 @@
 import Input from "@/shared/components/Input";
 import Button from "@/shared/components/Button";
+import Select from "@/shared/components/Select";
+// import "../services/selectService";
+import { useEffect, useState } from "react";
+import { getDocumentTypes } from "../services/selectService";
 
 export default function UserForm(){
 
+    const [documentTypes, setDocumentTypes] = useState([])
+    useEffect (() =>{
+        getDocumentTypes().then(setDocumentTypes)
+    }, []);
     // const hundleNameChange = (e) => {
     //     console.log("Nombre del usuario: ", e.target.value)
     // };
     
     const hundleEmailBlur = (e) => {
         console.log("email del usuario: ", e.target.value)
-    }
+    };
     const hundleSubmit = (e) => {
         console.log("formulario enviado: ", e.target.value)
-    }
+    };
     
     // una validación básica
     const hundleNameChange = (e) => {
@@ -38,6 +46,12 @@ export default function UserForm(){
                     onBlur={hundleEmailBlur}
                 >
                 </Input>
+                <Select
+                    label="tipo de documento"
+                    name = "documentTypes"
+                    opcions = {documentTypes}
+                >
+                </Select>
 
                 {/* Actions */}
                 <div className= "flex items-center justify-center gap-12">
