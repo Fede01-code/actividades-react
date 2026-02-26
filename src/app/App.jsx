@@ -1,22 +1,10 @@
-import UserForm from "@/features/users/components/UserForm"
-import '@/styles/global.css'
-import DeleteCounter from "@/shared/components/DeleteCounter"
-import DeleteUseEffect from "@/shared/components/DeleteUseEffect"
-import Select from "@/shared/components/Select"
-
+import router from "@/app/router" 
+import { RouterProvider } from "react-router-dom"
 
 export default function App(){
   return(
-    <div className="grid  grid-cols-1 gap-6 justify-items-center">
-      <h1 className="bg-brand text-brand-soft text-2xl font-bold">
-        Rico Programar
-      </h1>
-      <div>
-        <UserForm/>
-      </div>
-        <DeleteCounter/>
-        <DeleteUseEffect/>
 
-    </div>
+      <RouterProvider router={router}/>
+    
   )
 }

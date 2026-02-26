@@ -1,4 +1,4 @@
-import MainLayout from "@/shared/MainLayout"
+import MainLayout from "../../shared/layout/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter ([
