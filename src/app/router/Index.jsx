@@ -1,4 +1,5 @@
 import MainLayout from "../../shared/layout/MainLayout";
+import AuthLayout from "../../shared/layout/AuthLayout";
 import HomePage from "../../features/home/pages/HomePages";
 import ProfilePage from "../../features/users/pages/ProfilePage";
 import { createBrowserRouter } from "react-router-dom"
@@ -6,11 +7,11 @@ import { createBrowserRouter } from "react-router-dom"
 const router = createBrowserRouter ([
     {
     
-        path: "/",
+        
         element: <MainLayout/>,
         children: [
             {
-                index: true,
+                path: "/",
                 element: <HomePage/>
             },
             {
@@ -29,6 +30,23 @@ const router = createBrowserRouter ([
                 path: "perfil",
                 element: <ProfilePage/>
             }
+        ]
+    },
+    {
+        element: <AuthLayout/>,
+        children: [
+            {
+                path: "login",
+                element: <AuthLayout/>
+            },
+            {
+                path: "forgot-password",
+                element: <h1 className="p-4">recuperar contraseña</h1>
+            },
+            {
+                path: "reset-password",
+                element: <h1 className="p-4">Cambiar contraseña</h1>
+            },
     ]
 
 }

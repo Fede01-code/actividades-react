@@ -12,7 +12,6 @@ export default function HomePage (){
                 }
             }
         >
-            <div className="absolute inset-0 bg-black/60"></div>
             <div className="relative z-10 text-center text-text-inverse">
                 <h1 className="text-h1 font-bold">
                     Bienvenido al SENA
