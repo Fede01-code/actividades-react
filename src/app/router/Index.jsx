@@ -1,6 +1,7 @@
 import MainLayout from "../../shared/layout/MainLayout";
+import HomePage from "../../features/home/pages/HomePages";
 import ProfilePage from "../../features/users/pages/ProfilePage";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom"
 
 const router = createBrowserRouter ([
     {
@@ -10,7 +11,7 @@ const router = createBrowserRouter ([
         children: [
             {
                 index: true,
-                element: <h1 className="p-4">Inicio</h1>
+                element: <HomePage/>
             },
             {
                 path: "cursos",
