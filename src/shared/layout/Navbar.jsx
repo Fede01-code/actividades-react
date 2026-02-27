@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
-const Navbar = () => {
+const Navbar = ({variant = "solid"}) => {
     const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b bg-brand-soft">
+    <nav className= 
+      // Estos son los estilos del navbar para que quede transparente  
+      { `w-full border-b transition-colors duration-300 ${
+          variant === "transparent"
+          ? "bg-transparent border-transparent absolute top-0 left-0 z-30"
+          : "bg-brand border-border"
+        }`}>
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
           

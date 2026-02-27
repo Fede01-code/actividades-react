@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import herobg from "@/assets/images/imagen-hero.jpg"
+import herobg from "@/assets/images/imagen-hero.jpg";
 import { Outlet } from "react-router-dom";
 
 export default function MainLayout (){
@@ -10,8 +10,13 @@ export default function MainLayout (){
                 style = {{backgroundImage:`url(${herobg})`}}>
             </div>
 
+            {/* filtro */}
+            <div className="absolute inset-0 -z-10 bg-black/40"></div>
+
             {/* componente Nabvar creado anteriormente */}
-            <Navbar/>
+            <header className="relative z-20">
+                <Navbar variant="solid" />
+            </header>
             <main className="mx-auto max-w7 px-4 py-6">
                 <Outlet/>
             </main>
