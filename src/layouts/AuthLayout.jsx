@@ -1,5 +1,5 @@
 import authBg from "@/assets/images/auth-background.jpg"
-import UserForm from "@/features/users/components/UserForm"
+import { UserForm } from "@/features/users"; //Importación actual
 import { Outlet} from "react-router-dom"
 
 

@@ -1,8 +1,10 @@
-import MainLayout from "../../shared/layout/MainLayout";
-import AuthLayout from "../../shared/layout/AuthLayout";
+import MainLayout from "../../layouts/MainLayout";
+import AuthLayout from "../../layouts/AuthLayout";
 import HomePage from "../../features/home/pages/HomePages";
 import ProfilePage from "../../features/users/pages/ProfilePage";
+import ConfigUserPage from "@/features/users/pages/ConfigUserPage"
 import { createBrowserRouter } from "react-router-dom"
+import { ListUserPage } from "@/features/users";
 
 const router = createBrowserRouter ([
     {
@@ -15,12 +17,12 @@ const router = createBrowserRouter ([
                 element: <HomePage/>
             },
             {
-                path: "cursos",
-                element: <h1 className="p-4">Cursos</h1>
+                path: "usuario",
+                element: <ConfigUserPage/>
             },
             {
-                path: "contacto",
-                element: <h1 className="p-4">Contacto</h1>
+                path: "tabla",
+                element: <ListUserPage/>
             },
             {
                 path: "videos",
@@ -28,6 +30,10 @@ const router = createBrowserRouter ([
             },
             {
                 path: "perfil",
+                element: <ProfilePage/>
+            },
+            {
+                path: "users/:id/edit",
                 element: <ProfilePage/>
             }
         ]
