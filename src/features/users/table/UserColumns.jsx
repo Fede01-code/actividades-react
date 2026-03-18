@@ -1,5 +1,5 @@
 // Componente reutilizable que muestra un switch para activar o desactivar estados
-import StatusSwitch from "@/shared/components/StatusSwitch";
+import { StatusSwitch } from "@/shared/components";
 
 // Componente que contiene los botones de acciones (editar y eliminar) para cada usuario
 import UserRowActions from "../components/UserRowActions";

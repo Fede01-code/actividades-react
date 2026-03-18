@@ -1,17 +1,23 @@
 //Creación de componente input
 
-export default function Input({label, type = "text", ...props}){
+export default function Input({
+    label, 
+    type = "text",
+    error, 
+    ...props
+    }){
     return (
     <div className="w-[320px]">
         {/* label */}
         {label && (
             <label
-                className=" 
+                className={`
                     block 
                     text-[8px] 
+                    px-4
                     mb-1
-                    
-                "
+                    ${error ? "text-red-600" : ""}
+                `}
             >
                 {label}
             </label>
@@ -44,10 +50,10 @@ export default function Input({label, type = "text", ...props}){
             {/* input visual */}
             <input 
                 type={type}
-                className="
+                className={`
                     relative
                     w-full
-                    h-8
+                    h-12
                     rounded-md
                     border
                     border-gray-300
@@ -57,12 +63,15 @@ export default function Input({label, type = "text", ...props}){
                     focus:outline-none
                     focus:ring-blue-500
                     focus:border-blue-500
-                "
+                    ${error ? "border-red-600" : "broder-gray-300"}
+                `}
                 {...props}
             />
         </div>
 
-        
+        <div>
+            {error && <p className="text-[8px] text-red-600 mt-1">{error}</p>}
+        </div>
         
     </div>
 
