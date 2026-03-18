@@ -1,4 +1,4 @@
-import { Input, Button, Select } from "@/shared/components";
+import { Input, Button, Select, Checkbox } from "@/shared/components";
 import { AvatarUploader } from "@/shared/components";
 import { useEffect, useState } from "react";
 import { getDocumentTypes } from "../services/selectService";
@@ -15,12 +15,17 @@ export default function UserForm(){
         password: "",
         avatarUrl: null,
 
+        // Flags Booleanos
+        isStaff: false,
+        isActive: true,
+        isSuperuser: false,
+
     });
     // Función que se ejecuta cada vez que cambia el valor de un input del formulario 
     const handleChange = (e) => { 
         // Se obtiene el nombre del campo (name) y su valor actual (value) 
         // desde el elemento que disparó el evento 
-        const { name, value } = e.target; 
+        const { name, value, type, checked } = e.target; 
         // Se actualiza el estado del formulario 
         // prev representa el estado anterior del formulario 
         setFormData((prev) => ({ 
@@ -28,7 +33,7 @@ export default function UserForm(){
             ...prev, 
             // Se actualiza únicamente el campo que cambió 
             // [name] permite usar el nombre del input como clave dinámica 
-            [name]: value, 
+            [name]: type === "checkbox" ? checked : value, 
         }));
     };
  
@@ -138,6 +143,29 @@ export default function UserForm(){
             onChange={handleChange}
             error={error.password}
           ></Input>
+          <div className="grid gap-2">
+            <Checkbox
+              id="isStaff"
+              name="isStaff"
+              label="estado inactivo"
+              checked={formData.isStaff}
+              onChange={handleChange}
+            />
+            <Checkbox
+              id="isActive"
+              name="isActive"
+              label="estado activo"
+              checked={formData.isActive}
+              onChange={handleChange}
+            />
+            <Checkbox
+              id="isSuperuser"
+              name="isSuperuser"
+              label="es super usuario"
+              checked={formData.isSuperuser}
+              onChange={handleChange}
+            />
+          </div>
 
           <AvatarUploader
             onUpload={(url) =>
