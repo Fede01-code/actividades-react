@@ -4,7 +4,7 @@ export default function Select ({
     value,
     error,
     onChange,
-    opcions = []
+    options = []
     }
 ){
 
@@ -39,9 +39,9 @@ export default function Select ({
             `}
             >
                 <option value="">Seleccione un tipo de documento</option>
-                {opcions.map((option) => {
+                {options.map((option) => {
                     return(
-                    <option key = {option.id} value = {option.id}> 
+                    <option key = {option.value} value = {option.value}> 
                         {option.label}
                     </option>
                     )

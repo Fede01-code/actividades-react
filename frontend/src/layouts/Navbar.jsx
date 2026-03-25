@@ -1,10 +1,18 @@
 import { Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
+import {
+  IconButton,
+  // IconAction,
+  Dropdown,
+  DropdownTrigger,
+  DropdownItem,
+  DropdownContent
+} from "@/shared/components"
 
 
 const Navbar = ({variant = "solid"}) => {
-    const [isOpen, setIsOpen] = useState(false);
+    
 
   return (
     <nav className= 
@@ -66,14 +74,14 @@ const Navbar = ({variant = "solid"}) => {
             </div>
 
 
-            {/* Icono de usuario */}
+            {/* Icono de usuario
             {/* <button className="flex items-center justify-center size-10 rounded-full border hover:bg-gray-100 transition">
               <User className="size-5" />
             </button> */}
 
 
             {/* Usuario */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center size-10 rounded-full border hover:bg-surface transition"
@@ -117,6 +125,44 @@ const Navbar = ({variant = "solid"}) => {
                   </ul>
                 </div>
               )}
+            </div> */}
+            {/* =========DROPDOWN */}
+            <div className="p-10">
+              <Dropdown>
+                <DropdownTrigger>
+                  <IconButton ariaLabel= "Menu de usuario">
+                    <User/>
+                  </IconButton>
+                </DropdownTrigger>
+
+                <DropdownContent className="right-0 w-48">
+                  <DropdownItem>
+                    <Link to = "/login" className="block w-full">
+                      perfil
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to = "/login" className="block w-full">
+                      configuración
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to = "/login" className="block w-full">
+                      configuración
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to = "/login" className="block w-full">
+                      configuración
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to = "/login" className="block w-full">
+                      configuración
+                    </Link>
+                  </DropdownItem>
+                </DropdownContent>
+              </Dropdown>
             </div>
           </div>
         </div>

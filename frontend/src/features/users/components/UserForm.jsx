@@ -121,7 +121,7 @@ export default function UserForm(){
           <Select
             label="tipo de documento"
             name="documentTypes"
-            opcions={documentTypes}
+            options={documentTypes}
             value={formData.documentTypes}
             onChange={handleChange}
             error={error.documentTypes}
